@@ -3,12 +3,12 @@ version: '3.8'
 services:
   backend:
     build: 
-      context: .
-      dockerfile: backend/Dockerfile
+      context: ./backend
+      dockerfile: Dockerfile
     ports:
       - "8000:8000"
     volumes:
-      - ./backend/app:/app/app
+      - ./backend:/app
     environment:
       - ENV=development
     depends_on:
